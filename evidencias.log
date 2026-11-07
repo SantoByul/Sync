@@ -120,3 +120,17 @@ Error: Many passengers on this car
 [?2004lexit
 
 Script done on 2026-11-06 23:32:56-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-07 18:09:08-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="117" LINES="10"]
+[?2004h]0;danie@SantoByul: ~/Soft/Sync/Sync[01;32mdanie@SantoByul[00m:[01;34m~/Soft/Sync/Sync[00m$ make all
+[?2004lgcc -Wall -pthread -o sync_car sync_car.c sync_car-runner.c
+[?2004h]0;danie@SantoByul: ~/Soft/Sync/Sync[01;32mdanie@SantoByul[00m:[01;34m~/Soft/Sync/Sync[00m$ ./sync_car
+[?2004lcar entering station with 40 free seats
+Error: station_load_car returned early!
+[?2004h]0;danie@SantoByul: ~/Soft/Sync/Sync[01;32mdanie@SantoByul[00m:[01;34m~/Soft/Sync/Sync[00m$ make tra[K[Ksan
+[?2004lgcc -Wall -pthread -fsanitize=thread -g -o sync_car_tsan sync_car.c sync_car-runner.c
+[?2004h]0;danie@SantoByul: ~/Soft/Sync/Sync[01;32mdanie@SantoByul[00m:[01;34m~/Soft/Sync/Sync[00m$ ./sync_car_sta[K[K[Kst[K[Ktsan
+[?2004lFATAL: ThreadSanitizer: unexpected memory mapping 0x5cf44345a000-0x5cf44345b000
+[?2004h]0;danie@SantoByul: ~/Soft/Sync/Sync[01;32mdanie@SantoByul[00m:[01;34m~/Soft/Sync/Sync[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-07 18:10:40-03:00 [COMMAND_EXIT_CODE="66"]
